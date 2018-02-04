@@ -1,0 +1,39 @@
+<?xml version='1.0' standalone='yes'?>
+<menu>
+
+    <item>
+        <name>Main</name>
+        <href>/</href>
+        <controller>main_controller</controller>
+        <location>main.phtml</location>
+    </item>
+
+    <item>
+        <name>First</name>
+        <href>/first</href>
+        <controller>game_controller</controller>
+        <location>first.phtml</location>
+    </item>
+
+    <item>
+        <name>there</name>\
+        <href>/there</href>
+        <controller>game_controller</controller>
+        <location>there.phtml</location>
+    </item>
+
+    <item>
+        <name>here</name>
+        <href>/here</href>
+        <controller>game_controller</controller>
+        <location>here.phtml</location>
+    </item>
+	
+	<item>
+        <name>First</name>
+        <href>/first</href>
+        <controller>game_controller</controller>
+        <location>first.phtml</location>
+    </item>
+
+</menu>
