@@ -1,19 +1,19 @@
 <?php
 class core_view
 {
-    public function generate($template, $page)
+    public function generate($template, $page, $Gold)
     {
         $template = $this->getContens($template);
-        echo $this->replace($page, $template);
+        echo $this->replace($page, $template, $Gold);
     }
 
 
-    public function replace ($page, $template)
+    public function replace ($page, $template, $Gold)
     {
         $search = array
         (
             "%%__page__%%" => $this->getContens($page),
-           // "%%__menu__%%" => core_menuLoader::getMenu(),
+           // "%%__gold__%%" => core_menuLoader::getMenu(),
         );
 
         return str_replace(array_flip($search), $search, $template);

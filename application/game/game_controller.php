@@ -20,7 +20,7 @@ class game_controller extends core_controller
 
     public function actionIndex($location)
     {
-        $this->model->getCoinCount();
-        $this->view->generate('template.phtml', $location);
+        $UserGold = $this->model->getCoinCount();
+        $this->view->generate('template.phtml', $location, $UserGold);
     }
 }

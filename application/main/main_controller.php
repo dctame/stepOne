@@ -12,7 +12,7 @@ class main_controller extends core_controller
 
     public function actionIndex($location)
     {
-        $this->view->generate('template.phtml', $location);
+        $this->view->generate('templateMain.phtml', $location, $Gold);
     }
 }
     

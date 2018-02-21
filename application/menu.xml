@@ -16,7 +16,7 @@
     </item>
 
     <item>
-        <name>there</name>\
+        <name>there</name>
         <href>/there</href>
         <controller>game_controller</controller>
         <location>there.phtml</location>

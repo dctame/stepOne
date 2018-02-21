@@ -1,11 +1,18 @@
 <br>
 <div class="description">
-    <h1>Ты входишь в команту которая была справа от первой <br></h1>
-    <p>В комнате так же пусто. Из кмнаты ведет проход Налево.
+    <h2>Ты входишь в команту которая была справа от первой <br></h2>
+    <p class="text-center" >В комнате на полу лежит монетка. Из комнаты ведет проход Налево.
 </div>
 <div class="choises">
     <form>
-        <input class="choise" type="button" value="Левая комната" onClick='location.href="/here"'>
-        <input class="choise" type="button" value="Первая комната" onClick='location.href="/first"'>
+        <a class="btn btn-primary btn-lg btn-block" href="/here" role="button">Левая комната</a>
+        <a class="btn btn-primary btn-lg btn-block" href="/first" role="button">Первая комната</a>
+        <br>
+        <button type="button" class="btn btn-primary">Взять монетку</button>
+
+        <form action="/here" method="post">
+            <input type="submit" class="btn btn-primary" name="my_button" value="Нажать">
+        </form>
+
     </form>
 </div>

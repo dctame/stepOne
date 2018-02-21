@@ -21,16 +21,16 @@ class game_model extends core_model
         }
     }
 
+
+    
+
+
     public function getCoinCount()
     {
         $this->dbCconnect();
         $this->result = $this->mysqli->query("SELECT coin FROM gold where name like 'username1'");
             $this->result->data_seek(0);
             $row = $this->result->fetch_assoc();
-            echo "coin count =" . $row['coin'] . "\n";
-
-
-        print  " <br> " . $this->coinCont[gold];
-        return $this->coinCont;
+            return $row['coin'];
     }
 }
