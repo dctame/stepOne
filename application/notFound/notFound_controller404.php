@@ -19,7 +19,7 @@ class notFound_controller404
 
     public function actionIndex()
     {
-        $this->view->generate('template.phtml', '404.phtml');
+        $this->view->generate('templateMain.phtml', '404.phtml', '');
     }
 
 }
