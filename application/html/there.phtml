@@ -10,9 +10,21 @@
         <br>
         <button type="button" class="btn btn-primary">Взять монетку</button>
 
-        <form action="/here" method="post">
-            <input type="submit" class="btn btn-primary" name="my_button" value="Нажать">
-        </form>
 
+        <script>
+            $(document).ready(function(){                          // по завершению загрузки страницы
+                $('#example-3').click(function(){                  // вешаем на клик по элементу с id = example-3
+                    $.post('ajax/example.xml', {}, function(xml){  // загрузку XML из файла example.xml
+                        $('#example-3').html('');
+                        $(xml).find('note').each(function(){       // заполняем DOM элемент данными из XML
+                            $('#example-3').append('To: '   + $(this).find('to').text() + '<br/>')
+                                .append('From: ' + $(this).find('from').text() + '<br/>')
+                                .append('<b>'    + $(this).find('heading').text() + '</b><br/>')
+                                .append(           $(this).find('body').text() + '<br/>');
+                        });
+                    }, 'xml');                                     // указываем явно тип данных
+                })
+            });
+        </script>
     </form>
 </div>
